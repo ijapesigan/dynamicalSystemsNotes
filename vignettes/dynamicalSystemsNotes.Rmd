@@ -1,0 +1,26 @@
+---
+title: "dynamicalSystemsNotes: Title"
+author: "Ivan Jacob Agaloos Pesigan"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{dynamicalSystemsNotes: Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+#| include = FALSE
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/vignettes-"
+)
+```
+
+## Description
+
+Quarto template repository.
+
+## GitHub Pages
+
+The Quarto website is deployed in [https://ijapesigan.github.io/dynamicalSystemsNotes](https://ijapesigan.github.io/dynamicalSystemsNotes).
