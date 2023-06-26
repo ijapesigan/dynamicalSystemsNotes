@@ -36,4 +36,4 @@ jobs:
         with:
           clean: true
           branch: gh-pages
-          folder: docs
+          folder: quarto
