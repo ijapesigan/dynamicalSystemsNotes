@@ -27,6 +27,7 @@ jobs:
       -
         name: Render Quarto Project
         run: |
+          apptainer exec image.sif make
           apptainer exec image.sif Rscript qmd/r-script/prerender.R
           apptainer exec image.sif quarto render .
       -
