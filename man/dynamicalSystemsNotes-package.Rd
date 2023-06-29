@@ -4,9 +4,9 @@
 \name{dynamicalSystemsNotes-package}
 \alias{dynamicalSystemsNotes-package}
 \alias{_PACKAGE}
-\title{dynamicalSystemsNotes: Quarto Template}
+\title{dynamicalSystemsNotes: Dynamical Systems Notes}
 \description{
-Quarto template repository.
+HDFS 538 Dynamical Systems Methods and Applications personal study notes.
 }
 \seealso{
 Useful links:

@@ -25,6 +25,8 @@
 ^docs$
 ^index\.qmd$
 ^latex.*$
+^pkgdown$
 ^scss$
+^quarto$
 ^qmd$
 ^dynamicalSystemsNotes\.pdf$

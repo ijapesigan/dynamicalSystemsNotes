@@ -1,4 +1,4 @@
-#' Simple Linear System Function Constructor
+#' Simple Logistic System Function Constructor
 #'
 #' @details The logistic system is given by
 #'   \deqn{

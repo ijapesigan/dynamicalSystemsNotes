@@ -3,7 +3,7 @@ project:
   output-dir: quarto
 
 book:
-  title: "Quarto Template"
+  title: "Dynamical Systems Notes"
   author: "Ivan Jacob Agaloos Pesigan"
   date: today
   search: true

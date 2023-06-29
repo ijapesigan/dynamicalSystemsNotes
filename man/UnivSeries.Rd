@@ -24,27 +24,17 @@ Univariate Time Series
 The univariate time series
 is generated using the following equation
 \deqn{
-    y_{i t} = f \left( y_{i \left( t - 1 \right) \right)} .
+    y_{i t} = f \left( y_{i \left( t - 1 \right)} \right) .
   }
 }
 \examples{
 # linear
-## deterministic
 func <- LinearConstructor(alpha = 8.0, beta = 0.8)
-y <- UnivSeries(y0 = 0.01, func = func, nt = 100)
-plot(y)
-## stochastic
-func <- LinearConstructor(alpha = 8.0, beta = 0.8, sigmasq = 1)
 y <- UnivSeries(y0 = 0.01, func = func, nt = 100)
 plot(y)
 
 # logistic
-## deterministic
 func <- LogisticConstructor(r = 1.5, K = 10)
-y <- UnivSeries(y0 = 0.01, func = func, nt = 100)
-plot(y)
-## stochastic
-func <- LogisticConstructor(r = 1.5, K = 10, sigmasq = 1)
 y <- UnivSeries(y0 = 0.01, func = func, nt = 100)
 plot(y)
 

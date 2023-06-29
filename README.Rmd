@@ -18,8 +18,8 @@ knitr::opts_chunk$set(
 
 ## Description
 
-Quarto template repository.
+HDFS 538 Dynamical Systems Methods and Applications personal study notes.
 
 ## GitHub Pages
 
-The Quarto website is deployed in [https://ijapesigan.github.io/dynamicalSystemsNotes](https://ijapesigan.github.io/dynamicalSystemsNotes).
+The Quarto website is deployed in [https://ijapesigan.quarto.pub/dynamicalsystemsnotes](https://ijapesigan.quarto.pub/dynamicalsystemsnotes).

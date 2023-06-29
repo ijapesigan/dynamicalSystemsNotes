@@ -7,9 +7,9 @@ cff-version: 1.2.0
 message: 'To cite package "dynamicalSystemsNotes" in publications use:'
 type: software
 license: MIT
-title: 'dynamicalSystemsNotes: Quarto Template'
+title: 'dynamicalSystemsNotes: Dynamical Systems Notes'
 version: 0.9.1
-abstract: Quarto template repository.
+abstract: HDFS 538 Dynamical Systems Methods and Applications personal study notes.
 authors:
 - family-names: Pesigan
   given-names: Ivan Jacob Agaloos
@@ -17,7 +17,7 @@ authors:
   orcid: https://orcid.org/0000-0003-4818-8420
 preferred-citation:
   type: manual
-  title: 'dynamicalSystemsNotes: Quarto Template'
+  title: 'dynamicalSystemsNotes: Dynamical Systems Notes'
   authors:
   - family-names: Pesigan
     given-names: Ivan Jacob Agaloos

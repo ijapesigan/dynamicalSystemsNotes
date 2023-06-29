@@ -2,7 +2,7 @@
 % Please edit documentation in R/dynamical-systems-notes-logistic-constructor.R
 \name{LogisticConstructor}
 \alias{LogisticConstructor}
-\title{Simple Linear System Function Constructor}
+\title{Simple Logistic System Function Constructor}
 \usage{
 LogisticConstructor(r, K, sigmasq = NULL)
 }
@@ -18,7 +18,7 @@ Variance of the random error term.
 If \code{sigmasq = NULL}, the system is deterministic.}
 }
 \description{
-Simple Linear System Function Constructor
+Simple Logistic System Function Constructor
 }
 \details{
 The logistic system is given by
