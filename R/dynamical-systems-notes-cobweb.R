@@ -1,4 +1,4 @@
-#' Cobweb plot
+#' Cobweb Plot
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
@@ -24,8 +24,8 @@
 #' @export
 Cobweb <- function(y0,
                    func,
-                   tol = 1e-11,
-                   max_iter = 1000000L) {
+                   tol = sqrt(.Machine$double.eps),
+                   max_iter = 1000L) {
   y <- FixedPoint(
     y0 = y0,
     func = func,

@@ -7,12 +7,7 @@ lapply(
     message(text)
     func <- LinearConstructor(alpha = 8.0, beta = 0.8)
     linear <- FixedPoint(y0 = 0.01, func = func)
-    Cobweb(y0 = 0.01, func = func)
     y_linear <- UnivSeries(y0 = 0.01, func = func, nt = 1000000L)
-    func <- LogisticConstructor(r = 1.5, K = 10)
-    logistic <- FixedPoint(y0 = 0.01, func = func)
-    Cobweb(y0 = 0.01, func = func)
-    y_logistic <- UnivSeries(y0 = 0.01, func = func, nt = 1000000L)
     testthat::test_that(
       paste(text, "linear"),
       {
@@ -26,8 +21,18 @@ lapply(
             40 - y_linear[length(y_linear)]
           ) <= tol
         )
+        testthat::expect_warning(
+          FixedPoint(
+            y0 = 0.01,
+            func = func,
+            max_iter = 5L
+          )
+        )
       }
     )
+    func <- LogisticConstructor(r = 1.5, K = 10)
+    logistic <- FixedPoint(y0 = 0.01, func = func)
+    y_logistic <- UnivSeries(y0 = 0.01, func = func, nt = 1000000L)
     testthat::test_that(
       paste(text, "logistic"),
       {
@@ -41,9 +46,16 @@ lapply(
             3.33333333 - y_logistic[length(y_logistic)]
           ) <= tol
         )
+        testthat::expect_warning(
+          FixedPoint(
+            y0 = 0.01,
+            func = func,
+            max_iter = 5L
+          )
+        )
       }
     )
   },
   text = "test-dynamical-systems-notes-fixed-point",
-  tol = 1e-8
+  tol = 0.001
 )

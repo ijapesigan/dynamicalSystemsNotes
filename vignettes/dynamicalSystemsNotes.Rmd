@@ -8,6 +8,13 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/ijapesigan/dynamicalSystemsNotes/workflows/R-CMD-check/badge.svg)](https://github.com/ijapesigan/dynamicalSystemsNotes/actions)
+[![test-coverage](https://github.com/ijapesigan/dynamicalSystemsNotes/actions/workflows/test-coverage.yaml/badge.svg)](https://github.com/ijapesigan/dynamicalSystemsNotes/actions/workflows/test-coverage.yaml)
+[![lint](https://github.com/ijapesigan/dynamicalSystemsNotes/actions/workflows/lint.yaml/badge.svg)](https://github.com/ijapesigan/dynamicalSystemsNotes/actions/workflows/lint.yaml)
+[![codecov](https://codecov.io/gh/ijapesigan/dynamicalSystemsNotes/branch/main/graph/badge.svg)](https://codecov.io/gh/ijapesigan/dynamicalSystemsNotes)
+<!-- badges: end -->
+
 ```{r}
 #| include = FALSE
 knitr::opts_chunk$set(
@@ -21,6 +28,12 @@ knitr::opts_chunk$set(
 
 HDFS 538 Dynamical Systems Methods and Applications personal study notes.
 
-## GitHub Pages
+## More Information
 
-The Quarto website is deployed in [https://ijapesigan.quarto.pub/dynamicalsystemsnotes](https://ijapesigan.quarto.pub/dynamicalsystemsnotes).
+See
+[GitHub Pages](https://ijapesigan.github.io/dynamicalSystemsNotes)
+for package documentation.
+
+See
+[Quarto Pub](https://ijapesigan.quarto.pub/dynamicalsystemsnotes)
+for the study notes.

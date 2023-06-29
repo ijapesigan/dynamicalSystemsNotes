@@ -14,7 +14,7 @@ Growth rate.}
 Carrying capacity.}
 
 \item{sigmasq}{Positive numeric value.
-Variance of the random error term.
+Variance of the random error term with expected value of zero.
 If \code{sigmasq = NULL}, the system is deterministic.}
 }
 \description{

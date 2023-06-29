@@ -1,0 +1,138 @@
+---
+title: "Simple Linear System"
+author: Ivan Jacob Agaloos Pesigan
+---
+
+## Simple Linear System
+
+Let the change function be
+
+\begin{equation}
+    \theta_{0} + \theta_{1} y_{i(t - 1)} .
+\end{equation}
+
+The system is given by
+
+\begin{equation}
+    y_{it} = y_{i(t - 1)} + \theta_{0} + \theta_{1} y_{i(t - 1)}
+\end{equation}
+
+which simplifies to
+
+\begin{equation}
+    y_{it} = \theta_{0} + \left( 1 + \theta_{1} \right) y_{i(t - 1)}
+\end{equation}
+
+Let $\alpha = \theta_{0}$ and $\beta = 1 + \theta_{1}$. The deterministic simple linear system is given by
+
+\begin{equation}
+    y_{it} = \alpha + \beta y_{i(t - 1)} .
+\end{equation}
+
+Set an initial condition $y_{0}$ and then apply the function recursively.
+
+```{r}
+#| echo: false
+alpha <- 8
+beta <- 0.8
+y0 <- 0.001
+nt <- 100
+sigmasq <- 1
+key <- c(
+  "alpha",
+  "beta",
+  "y0",
+  "sigmasq",
+  "nt"
+)
+value <- c(
+  alpha,
+  beta,
+  y0,
+  sigmasq,
+  nt
+)
+description <- c(
+  "Intercept",
+  "Slope",
+  "Initial condition",
+  "Error variance",
+  "Maximum time"
+)
+symbol <- c(
+  "$\\alpha$",
+  "$\\beta$",
+  "$y_{0}$",
+  "$\\sigma^{2}$",
+  "$T$"
+)
+tab <- cbind(
+  key,
+  value,
+  symbol,
+  description
+)
+knitr::kable(tab, col.names = c("Variable", "Value", "Symbol", "Description"))
+```
+
+## Generate Data
+
+```{r}
+?LinearConstructor
+?UnivSeries
+```
+
+```{r}
+func <- LinearConstructor(alpha = alpha, beta = beta)
+y <- UnivSeries(
+  y0 = y0,
+  func = func,
+  nt = nt
+)
+```
+
+```{r}
+#| echo: false
+plot(
+  y,
+  xlab = "Time",
+  ylab = expression(y[t]),
+  main = substitute(
+    paste(
+      "Deterministtic Linear System (",
+      alpha,
+      " = ",
+      alpha_i,
+      ", ",
+      beta,
+      " = ",
+      beta_i,
+      ")"
+    ),
+    list(
+      alpha_i = alpha,
+      beta_i = beta
+    )
+  )
+)
+```
+
+## Fixed Point
+
+```{r}
+?FixedPoint
+?Cobweb
+```
+
+```{r}
+ystar <- FixedPoint(y0 = y0, func = func)
+ystar <- ystar[length(ystar)]
+ystar
+```
+
+```{r}
+Cobweb(
+  y0 = y0,
+  func = func
+)
+```

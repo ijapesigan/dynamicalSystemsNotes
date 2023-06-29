@@ -1,0 +1,37 @@
+---
+title: "Overview of Dynamical Systems"
+author: Ivan Jacob Agaloos Pesigan
+---
+
+## Important concepts
+
+- **System**: A set of interrelated variables.
+- **Dynamical system**: A system in which the present state of the system depends on the previous states of the system.
+- **State space**: A $p$-dimensional space constituted by all possible values taken on by the variables of a system over an exteded period of time.
+- **Initial conditions**: A selected starting point in the state space.
+
+## Discrete time dynamical system
+
+- Time is represented as integers.
+- Data is equally spaced.
+- Represented as
+
+    \begin{equation}
+        \mathrm{Process}_{it} = \mathrm{Process}_{i(t - 1)} + \mathrm{Change\ functions} \left( \cdot \right) + \mathrm{Random\ noise}_{it}
+    \end{equation}
+
+    - $i$ person index
+    - $t$ discrete-valued time index
+    - $\mathrm{Process}_{it}$ vector of observed or latent processes
+
+## Why dynamical systems modeling?
+
+- Study the mechanism of change (stability and change).
+- Rationale for longitudinal research (Baltes & Nesselroade, 1979) 
+    - intraindividual change
+    - interindividual change in intraindividual change
+    - interrelationships in behavioral change
+    - determinants of intraindividual change
+    - determinants of interindividual change in intraindividual change
+
+See Cronbach & Furby, 1970, Nesselroade & Cable, 1974, Baltes & Nesselroade, 1979 for a historical accounting of studying change.

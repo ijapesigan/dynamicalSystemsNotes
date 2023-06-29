@@ -15,7 +15,7 @@
 #' @param K Numeric
 #'   Carrying capacity.
 #' @param sigmasq Positive numeric value.
-#'   Variance of the random error term.
+#'   Variance of the random error term with expected value of zero.
 #'   If `sigmasq = NULL`, the system is deterministic.
 #'
 #' @examples
@@ -43,9 +43,11 @@ LogisticConstructor <- function(r,
       function(y) {
         return(
           (
-            r * y
-          ) * (
-            1 - (y / K)
+            (
+              r * y
+            ) * (
+              1 - (y / K)
+            )
           ) + stats::rnorm(
             n = 1,
             mean = 0,

@@ -2,9 +2,9 @@
 % Please edit documentation in R/dynamical-systems-notes-cobweb.R
 \name{Cobweb}
 \alias{Cobweb}
-\title{Cobweb plot}
+\title{Cobweb Plot}
 \usage{
-Cobweb(y0, func, tol = 1e-11, max_iter = 1000000L)
+Cobweb(y0, func, tol = sqrt(.Machine$double.eps), max_iter = 1000L)
 }
 \arguments{
 \item{y0}{Numeric.
@@ -21,7 +21,7 @@ Convergence criteria.}
 Maximum number of iterations.}
 }
 \description{
-Cobweb plot
+Cobweb Plot
 }
 \examples{
 # linear

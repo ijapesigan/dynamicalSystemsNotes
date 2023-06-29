@@ -1,4 +1,4 @@
-#' Fixed point
+#' Fixed Point
 #'
 #' @author Ivan Jacob Agaloos Pesigan
 #'
@@ -24,8 +24,8 @@
 #' @export
 FixedPoint <- function(y0,
                        func,
-                       tol = 1e-11,
-                       max_iter = 1000000L) {
+                       tol = sqrt(.Machine$double.eps),
+                       max_iter = 1000L) {
   y <- rep(x = NA_real_, times = max_iter)
   y[1] <- y0
   y_new <- func(y0)

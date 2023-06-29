@@ -9,13 +9,14 @@ book:
   search: true
   repo-url: https://github.com/ijapesigan/dynamicalSystemsNotes
   repo-actions: [edit]
-  site-url: https://ijapesigan.github.io/dynamicalSystemsNotes/index.html
+  site-url: https://ijapesigan.quarto.pub/dynamicalSystemsNotes/index.html
   sidebar:
     collapse-level: 3
     pinned: true
   chapters:
     - index.qmd
-    - qmd/intro/intro.qmd
+    - qmd/intro/overview.qmd
+    - qmd/intro/linear.qmd
     - qmd/references/references.qmd
   appendices:
     - qmd/session/session.qmd

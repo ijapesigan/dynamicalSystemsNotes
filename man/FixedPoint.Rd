@@ -2,9 +2,9 @@
 % Please edit documentation in R/dynamical-systems-notes-fixed-point.R
 \name{FixedPoint}
 \alias{FixedPoint}
-\title{Fixed point}
+\title{Fixed Point}
 \usage{
-FixedPoint(y0, func, tol = 1e-11, max_iter = 1000000L)
+FixedPoint(y0, func, tol = sqrt(.Machine$double.eps), max_iter = 1000L)
 }
 \arguments{
 \item{y0}{Numeric.
@@ -21,7 +21,7 @@ Convergence criteria.}
 Maximum number of iterations.}
 }
 \description{
-Fixed point
+Fixed Point
 }
 \examples{
 # linear
