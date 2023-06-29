@@ -4,7 +4,7 @@
 \alias{LinearConstructor}
 \title{Simple Linear System Function Constructor}
 \usage{
-LinearConstructor(alpha, beta, sigmasq = NULL)
+LinearConstructor(alpha, beta)
 }
 \arguments{
 \item{alpha}{Numeric.
@@ -12,10 +12,6 @@ Intercept \eqn{\alpha}.}
 
 \item{beta}{Numeric.
 Slope \eqn{\beta}.}
-
-\item{sigmasq}{Positive numeric value.
-Variance of the random error term with expected value of zero.
-If \code{sigmasq = NULL}, the system is deterministic.}
 }
 \description{
 Simple Linear System Function Constructor

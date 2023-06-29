@@ -4,7 +4,7 @@
 \alias{LogisticConstructor}
 \title{Simple Logistic System Function Constructor}
 \usage{
-LogisticConstructor(r, K, sigmasq = NULL)
+LogisticConstructor(r, K)
 }
 \arguments{
 \item{r}{Numeric.
@@ -12,10 +12,6 @@ Growth rate.}
 
 \item{K}{Numeric
 Carrying capacity.}
-
-\item{sigmasq}{Positive numeric value.
-Variance of the random error term with expected value of zero.
-If \code{sigmasq = NULL}, the system is deterministic.}
 }
 \description{
 Simple Logistic System Function Constructor

@@ -13,9 +13,6 @@
 #'   Intercept \eqn{\alpha}.
 #' @param beta Numeric.
 #'   Slope \eqn{\beta}.
-#' @param sigmasq Positive numeric value.
-#'   Variance of the random error term with expected value of zero.
-#'   If `sigmasq = NULL`, the system is deterministic.
 #'
 #' @examples
 #' func <- LinearConstructor(alpha = 8.0, beta = 0.8)
@@ -23,29 +20,12 @@
 #'
 #' @export
 LinearConstructor <- function(alpha,
-                              beta,
-                              sigmasq = NULL) {
-  if (is.null(sigmasq)) {
-    return(
-      function(y) {
-        return(
-          alpha + beta * y
-        )
-      }
-    )
-  } else {
-    return(
-      function(y) {
-        return(
-          (
-            alpha + beta * y
-          ) + stats::rnorm(
-            n = 1,
-            mean = 0,
-            sd = sqrt(sigmasq)
-          )
-        )
-      }
-    )
-  }
+                              beta) {
+  return(
+    function(y) {
+      return(
+        alpha + beta * y
+      )
+    }
+  )
 }

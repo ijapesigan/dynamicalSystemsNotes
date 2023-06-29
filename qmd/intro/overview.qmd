@@ -3,6 +3,13 @@ title: "Overview of Dynamical Systems"
 author: Ivan Jacob Agaloos Pesigan
 ---
 
+```{r}
+#| include: false
+library(dynamicalSystemsNotes)
+library(printr)
+set.seed(42)
+```
+
 ## Important concepts
 
 - **System**: A set of interrelated variables.

@@ -3,6 +3,13 @@ title: "Simple Linear System"
 author: Ivan Jacob Agaloos Pesigan
 ---
 
+```{r}
+#| include: false
+library(dynamicalSystemsNotes)
+library(printr)
+set.seed(42)
+```
+
 ## Simple Linear System
 
 Let the change function be
@@ -78,6 +85,7 @@ knitr::kable(tab, col.names = c("Variable", "Value", "Symbol", "Description"))
 ## Generate Data
 
 ```{r}
+library(dynamicalSystemsNotes)
 ?LinearConstructor
 ?UnivSeries
 ```
@@ -120,6 +128,7 @@ plot(
 ## Fixed Point
 
 ```{r}
+library(dynamicalSystemsNotes)
 ?FixedPoint
 ?Cobweb
 ```
