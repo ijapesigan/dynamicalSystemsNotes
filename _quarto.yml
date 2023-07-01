@@ -16,6 +16,7 @@ book:
   chapters:
     - index.qmd
     - qmd/intro/overview.qmd
+    - qmd/intro/discrete.qmd
     - qmd/intro/linear.qmd
     - qmd/references/references.qmd
   appendices:

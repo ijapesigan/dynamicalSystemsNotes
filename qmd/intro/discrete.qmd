@@ -1,0 +1,23 @@
+---
+title: "Discrete Time Dynamical System"
+author: Ivan Jacob Agaloos Pesigan
+---
+
+```{r}
+#| include: false
+library(dynamicalSystemsNotes)
+library(printr)
+set.seed(42)
+```
+
+- Time is represented as integers.
+- Data is equally spaced.
+- Represented as
+
+    \begin{equation}
+        \mathrm{Process}_{it} = \mathrm{Process}_{i(t - 1)} + \mathrm{Change\ functions} \left( \cdot \right) + \mathrm{Random\ noise}_{it}
+    \end{equation}
+
+    - $i$ person index
+    - $t$ discrete-valued time index
+    - $\mathrm{Process}_{it}$ vector of observed or latent processes

@@ -10,8 +10,6 @@ library(printr)
 set.seed(42)
 ```
 
-## Simple Linear System
-
 Let the change function be
 
 \begin{equation}
@@ -30,7 +28,7 @@ which simplifies to
     y_{it} = \theta_{0} + \left( 1 + \theta_{1} \right) y_{i(t - 1)}
 \end{equation}
 
-Let $\alpha = \theta_{0}$ and $\beta = 1 + \theta_{1}$. The deterministic simple linear system is given by
+Let $\alpha = \theta_{0}$ and $\beta = 1 + \theta_{1}$. The simple linear system is given by
 
 \begin{equation}
     y_{it} = \alpha + \beta y_{i(t - 1)} .
@@ -44,33 +42,28 @@ alpha <- 8
 beta <- 0.8
 y0 <- 0.001
 nt <- 100
-sigmasq <- 1
 key <- c(
   "alpha",
   "beta",
   "y0",
-  "sigmasq",
   "nt"
 )
 value <- c(
   alpha,
   beta,
   y0,
-  sigmasq,
   nt
 )
 description <- c(
   "Intercept",
   "Slope",
   "Initial condition",
-  "Error variance",
   "Maximum time"
 )
 symbol <- c(
   "$\\alpha$",
   "$\\beta$",
   "$y_{0}$",
-  "$\\sigma^{2}$",
   "$T$"
 )
 tab <- cbind(
@@ -85,9 +78,8 @@ knitr::kable(tab, col.names = c("Variable", "Value", "Symbol", "Description"))
 ## Generate Data
 
 ```{r}
-library(dynamicalSystemsNotes)
-?LinearConstructor
-?UnivSeries
+LinearConstructor
+UnivSeries
 ```
 
 ```{r}
@@ -107,7 +99,7 @@ plot(
   ylab = expression(y[t]),
   main = substitute(
     paste(
-      "Deterministtic Linear System (",
+      "Linear System (",
       alpha,
       " = ",
       alpha_i,
@@ -128,10 +120,13 @@ plot(
 ## Fixed Point
 
 ```{r}
-library(dynamicalSystemsNotes)
-?FixedPoint
-?Cobweb
+FixedPoint
+Cobweb
 ```
+
+\begin{equation}
+  y^{\ast} = 
+\end{equation}
 
 ```{r}
 ystar <- FixedPoint(y0 = y0, func = func)
